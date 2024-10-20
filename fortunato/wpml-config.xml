@@ -1,0 +1,7 @@
+<wpml-config>
+	<admin-texts>
+		<key name="fortunato_theme_options_readmoretext"/>
+		<key name="fortunato_theme_options_menutext"/>
+		<key name="fortunato_theme_options_copyright"/>
+	</admin-texts>
+</wpml-config>
