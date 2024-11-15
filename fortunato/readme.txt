@@ -2,8 +2,8 @@
 Contributors: crestaproject
 Tags: one-column, left-sidebar, custom-menu, custom-colors, sticky-post, featured-images, theme-options, translation-ready, editor-style, full-width-template, rtl-language-support, blog, news, e-commerce
 Requires at least: 4.5
-Tested up to: 6.6
-Stable tag: 2.2.3
+Tested up to: 6.7
+Stable tag: 2.2.4
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,6 +35,10 @@ Fortunato includes support for Infinite Scroll in Jetpack and WooCommerce.
 * Webfonts Loader https://github.com/WPTT/webfont-loader licensed under MIT
 
 == Changelog ==
+= Version 2.2.4 =
+* Improved compatibility with WordPress 6.7
+* Updated WooCommerce templates
+
 = Version 2.2.3 =
 * Improved compatibility with WordPress 6.6
 
