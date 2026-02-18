@@ -32,101 +32,55 @@ add_filter('wp_generate_tag_cloud', 'fortunato_fix_tag_cloud',10,1);
  * Social Buttons
  */
 if ( ! function_exists( 'fortunato_social_buttons' ) ) {
-	function fortunato_social_buttons() {
-		$homeURL = get_theme_mod('fortunato_theme_options_homeurl', '');
-		$facebookURL = get_theme_mod('fortunato_theme_options_facebookurl', '#');
-		$twitterURL = get_theme_mod('fortunato_theme_options_twitterurl', '#');
-		$googleplusURL = get_theme_mod('fortunato_theme_options_googleplusurl', '#');
-		$linkedinURL = get_theme_mod('fortunato_theme_options_linkedinurl', '#');
-		$instagramURL = get_theme_mod('fortunato_theme_options_instagramurl', '#');
-		$youtubeURL = get_theme_mod('fortunato_theme_options_youtubeurl', '#');
-		$pinterestURL = get_theme_mod('fortunato_theme_options_pinteresturl', '#');
-		$tumblrURL = get_theme_mod('fortunato_theme_options_tumblrurl', '#');
-		$flickrURL = get_theme_mod('fortunato_theme_options_flickrurl', '#');
-		$vkURL = get_theme_mod('fortunato_theme_options_vkurl', '#');
-		$xingURL = get_theme_mod('fortunato_theme_options_xingurl', '');
-		$redditURL = get_theme_mod('fortunato_theme_options_redditurl', '');
-		$spotifyURL = get_theme_mod('fortunato_theme_options_spotifyurl', '');
-		$okruURL = get_theme_mod('fortunato_theme_options_okruurl', '');
-		$telegramURL = get_theme_mod('fortunato_theme_options_telegramurl', '');
-		$imdbURL = get_theme_mod('fortunato_theme_options_imdburl', '');
-		$twitchURL = get_theme_mod('fortunato_theme_options_twitchurl', '');
-		$whatsappURL = get_theme_mod('fortunato_theme_options_whatsappurl', '');
-		$facebookmessengerURL = get_theme_mod('fortunato_theme_options_facebookmessengerurl', '');
-		$tiktokURL = get_theme_mod('fortunato_theme_options_tiktokurl', '');
-		$subscribeURL = get_theme_mod('fortunato_theme_options_subscribeurl', '');
-		$skypeNAME = get_theme_mod('fortunato_theme_options_skypename', '');
-		?>
-		<?php if (!empty($homeURL)) : ?>
-			<a href="<?php echo esc_url($homeURL); ?>" title="<?php esc_attr_e( 'Home', 'fortunato' ); ?>"><i class="fas fa-home spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Home', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($facebookURL)) : ?>
-			<a href="<?php echo esc_url($facebookURL); ?>" title="<?php esc_attr_e( 'Facebook', 'fortunato' ); ?>"><i class="fab fa-facebook spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Facebook', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($twitterURL)) : ?>
-			<a href="<?php echo esc_url($twitterURL); ?>" title="<?php esc_attr_e( 'Twitter', 'fortunato' ); ?>"><i class="fab fa-twitter spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Twitter', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($googleplusURL)) : ?>
-			<a href="<?php echo esc_url($googleplusURL); ?>" title="<?php esc_attr_e( 'Google Plus', 'fortunato' ); ?>"><i class="fab fa-google-plus spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Google Plus', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($linkedinURL)) : ?>
-			<a href="<?php echo esc_url($linkedinURL); ?>" title="<?php esc_attr_e( 'Linkedin', 'fortunato' ); ?>"><i class="fab fa-linkedin spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Linkedin', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($instagramURL)) : ?>
-			<a href="<?php echo esc_url($instagramURL); ?>" title="<?php esc_attr_e( 'Instagram', 'fortunato' ); ?>"><i class="fab fa-instagram spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Instagram', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($youtubeURL)) : ?>
-			<a href="<?php echo esc_url($youtubeURL); ?>" title="<?php esc_attr_e( 'YouTube', 'fortunato' ); ?>"><i class="fab fa-youtube spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'YouTube', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($pinterestURL)) : ?>
-			<a href="<?php echo esc_url($pinterestURL); ?>" title="<?php esc_attr_e( 'Pinterest', 'fortunato' ); ?>"><i class="fab fa-pinterest spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Pinterest', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($tumblrURL)) : ?>
-			<a href="<?php echo esc_url($tumblrURL); ?>" title="<?php esc_attr_e( 'Tumblr', 'fortunato' ); ?>"><i class="fab fa-tumblr spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Tumblr', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($flickrURL)) : ?>
-			<a href="<?php echo esc_url($flickrURL); ?>" title="<?php esc_attr_e( 'Flickr', 'fortunato' ); ?>"><i class="fab fa-flickr spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Flickr', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($vkURL)) : ?>
-			<a href="<?php echo esc_url($vkURL); ?>" title="<?php esc_attr_e( 'VK', 'fortunato' ); ?>"><i class="fab fa-vk spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'VK', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($xingURL)) : ?>
-			<a href="<?php echo esc_url($xingURL); ?>" title="<?php esc_attr_e( 'Xing', 'fortunato' ); ?>"><i class="fab fa-xing spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Xing', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($redditURL)) : ?>
-			<a href="<?php echo esc_url($redditURL); ?>" title="<?php esc_attr_e( 'Reddit', 'fortunato' ); ?>"><i class="fab fa-reddit-alien spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Reddit', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($spotifyURL)) : ?>
-			<a href="<?php echo esc_url($spotifyURL); ?>" title="<?php esc_attr_e( 'Spotify', 'fortunato' ); ?>"><i class="fab fa-spotify spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Spotify', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($okruURL)) : ?>
-			<a href="<?php echo esc_url($okruURL); ?>" title="<?php esc_attr_e( 'OK.ru', 'fortunato' ); ?>"><i class="fab fa-odnoklassniki spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'OK.ru', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($telegramURL)) : ?>
-			<a href="<?php echo esc_url($telegramURL); ?>" title="<?php esc_attr_e( 'Telegram', 'fortunato' ); ?>"><i class="fab fa-telegram spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Telegram', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($imdbURL)) : ?>
-			<a href="<?php echo esc_url($imdbURL); ?>" title="<?php esc_attr_e( 'Imdb', 'fortunato' ); ?>"><i class="fab fa-imdb spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Imdb', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($twitchURL)) : ?>
-			<a href="<?php echo esc_url($twitchURL); ?>" title="<?php esc_attr_e( 'Twitch', 'fortunato' ); ?>"><i class="fab fa-twitch spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Twitch', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($whatsappURL)) : ?>
-			<a href="<?php echo esc_url($whatsappURL); ?>" title="<?php esc_attr_e( 'WhatsApp', 'fortunato' ); ?>"><i class="fab fa-whatsapp spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'WhatsApp', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($facebookmessengerURL)) : ?>
-			<a href="<?php echo esc_url($facebookmessengerURL); ?>" title="<?php esc_attr_e( 'Facebook Messenger', 'fortunato' ); ?>"><i class="fab fa-facebook-messenger spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Facebook Messenger', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($tiktokURL)) : ?>
-			<a href="<?php echo esc_url($tiktokURL); ?>" title="<?php esc_attr_e( 'TikTok', 'fortunato' ); ?>"><i class="fab fa-tiktok spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'TikTok', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($subscribeURL)) : ?>
-			<a href="<?php echo esc_url($subscribeURL); ?>" title="<?php esc_attr_e( 'Subscribe', 'fortunato' ); ?>"><i class="fas fa-user-plus spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Subscribe', 'fortunato' ); ?></span></i></a>
-		<?php endif; ?>
-		<?php if (!empty($skypeNAME)) : ?>
-			<a href="skype:<?php echo esc_attr($skypeNAME); ?>?call" title="<?php esc_attr_e( 'Skype', 'fortunato' ); ?>"><i class="fab fa-skype spaceLeftRight"><span class="screen-reader-text"><?php esc_html_e( 'Skype', 'fortunato' ); ?></span></i></a>
-		<?php endif;
-	}
+    function fortunato_social_buttons() {
+
+        $socials = [
+            'homeurl'              => [ 'icon' => 'fas fa-home',             'label' => 'Home',              'default' => '' ],
+            'facebookurl'          => [ 'icon' => 'fab fa-facebook',         'label' => 'Facebook',          'default' => '#' ],
+            'twitterurl'           => [ 'icon' => 'fab fa-twitter',          'label' => 'Twitter',           'default' => '#' ],
+            'googleplusurl'        => [ 'icon' => 'fab fa-google-plus',      'label' => 'Google Plus',       'default' => '#' ],
+            'linkedinurl'          => [ 'icon' => 'fab fa-linkedin',         'label' => 'Linkedin',          'default' => '#' ],
+            'instagramurl'         => [ 'icon' => 'fab fa-instagram',        'label' => 'Instagram',         'default' => '#' ],
+            'youtubeurl'           => [ 'icon' => 'fab fa-youtube',          'label' => 'YouTube',           'default' => '#' ],
+            'pinteresturl'         => [ 'icon' => 'fab fa-pinterest',        'label' => 'Pinterest',         'default' => '#' ],
+            'tumblrurl'            => [ 'icon' => 'fab fa-tumblr',           'label' => 'Tumblr',            'default' => '#' ],
+            'flickrurl'            => [ 'icon' => 'fab fa-flickr',           'label' => 'Flickr',            'default' => '#' ],
+            'vkurl'                => [ 'icon' => 'fab fa-vk',               'label' => 'VK',                'default' => '#' ],
+            'xingurl'              => [ 'icon' => 'fab fa-xing',             'label' => 'Xing',              'default' => '' ],
+            'redditurl'            => [ 'icon' => 'fab fa-reddit-alien',     'label' => 'Reddit',            'default' => '' ],
+            'spotifyurl'           => [ 'icon' => 'fab fa-spotify',          'label' => 'Spotify',           'default' => '' ],
+            'okruurl'              => [ 'icon' => 'fab fa-odnoklassniki',    'label' => 'OK.ru',             'default' => '' ],
+            'telegramurl'          => [ 'icon' => 'fab fa-telegram',         'label' => 'Telegram',          'default' => '' ],
+            'imdburl'              => [ 'icon' => 'fab fa-imdb',             'label' => 'Imdb',              'default' => '' ],
+            'twitchurl'            => [ 'icon' => 'fab fa-twitch',           'label' => 'Twitch',            'default' => '' ],
+            'whatsappurl'          => [ 'icon' => 'fab fa-whatsapp',         'label' => 'WhatsApp',          'default' => '' ],
+            'facebookmessengerurl' => [ 'icon' => 'fab fa-facebook-messenger','label' => 'Facebook Messenger','default' => '' ],
+            'tiktokurl'            => [ 'icon' => 'fab fa-tiktok',           'label' => 'TikTok',            'default' => '' ],
+            'subscribeurl'         => [ 'icon' => 'fas fa-user-plus',        'label' => 'Subscribe',         'default' => '' ],
+        ];
+
+        foreach ( $socials as $key => $social ) {
+            $url = get_theme_mod( 'fortunato_theme_options_' . $key, $social['default'] );
+            if ( empty( $url ) ) continue;
+            printf(
+                '<a href="%s" title="%s"><i class="%s spaceLeftRight"><span class="screen-reader-text">%s</span></i></a>',
+                esc_url( $url ),
+                esc_attr__( $social['label'], 'fortunato' ),
+                esc_attr( $social['icon'] ),
+                esc_html__( $social['label'], 'fortunato' )
+            );
+        }
+
+        $skype = get_theme_mod( 'fortunato_theme_options_skypename', '' );
+        if ( ! empty( $skype ) ) {
+            printf(
+                '<a href="skype:%s?call" title="%s"><i class="fab fa-skype spaceLeftRight"><span class="screen-reader-text">%s</span></i></a>',
+                esc_attr( $skype ),
+                esc_attr__( 'Skype', 'fortunato' ),
+                esc_html__( 'Skype', 'fortunato' )
+            );
+        }
+    }
 }
 
  /**

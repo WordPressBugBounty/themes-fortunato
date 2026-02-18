@@ -17,7 +17,11 @@ li#accordion-section-cresta_fortunato_buy_pro h3:before {
     border: none;
 	font-size: 80%;
     padding: 0 5px;
-	line-height: 26px;
+	line-height: 30px;
+    min-height: 30px;
+}
+.control-section-wptrt-button .accordion-section-title:after {
+	display: none !important;
 }
 #accordion-section-cresta_fortunato_buy_pro h3 {
 	background-color: #000000 !important;
